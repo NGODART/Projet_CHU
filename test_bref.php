@@ -6,6 +6,7 @@ if (isset($_SESSION['id_M']) and $_SESSION['chef'] == 1) {
     include('bandeau.php');
 }
 include('db_connect.php');
+//include('recup_session.php'); //
 ?>
 
 <!DOCTYPE html>
