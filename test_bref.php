@@ -6,7 +6,6 @@ if (isset($_SESSION['id_M']) and $_SESSION['chef'] == 1) {
     include('bandeau.php');
 }
 include('db_connect.php');
-include('recup_session.php'); //afin d'obtenir des variables contenu dans la session nécéssaire pour alimenter la bdd
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +21,7 @@ include('recup_session.php'); //afin d'obtenir des variables contenu dans la ses
     <center>
         <h2>Test BREF</h2>
         <!--- Formulaire du test -->
-        <form method="post" name=insertion action="test_bref.php">
+        <form method="post" name=insertion action="test_bref.php"> <!--il faudra remettre la direction vers ./choix_test.php-->
             
             <table width="95%" border="1" align="center">
                 <!--- EPREUVE 1 -->
@@ -179,7 +178,7 @@ include('recup_session.php'); //afin d'obtenir des variables contenu dans la ses
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
                 <br>
                 <br>
-                <input type="submit" value="Afficher les réponses du test" name="affREPONSES"><!--valider les réponses du test plutot et apres envois vers une autre page.-->
+                <input type="submit" value="Valider les réponses du test" name="affREPONSES">
                 <br>
                 <br>
             </form>
@@ -197,7 +196,12 @@ if (isset($_POST['affREPONSES'])) {
                 /////////////////////////// A VIRER PLUS TARD ///////////////////////////////
 
 				//récupère les infos du patient
-				$id_patient = $_SESSION['id_P'];
+
+                $id_pat = $base->prepare(query:'select id_patient from consultation order by id_consultation desc limit 1');
+                $id_pat->execute(array());
+                while ($requetePat= $id_pat->fetch()){
+                    $id_patient=$requetePat['id_patient']; // recupere le patient associé à la dernière consultation que l'on considère en cours.
+                }
 				$res = $base->query("SELECT * FROM `patient` WHERE `id_P`= $id_patient");	
 				$donnees = $res->fetch();
 				
@@ -208,8 +212,11 @@ if (isset($_POST['affREPONSES'])) {
 				$NSC_Bref = 1;}
 				
 				//récupère le no de consult
-				$no_consult = $_SESSION['id_Consult']; // selectionner la derniere consult enregistrer car c'est celle qui est en cvours ducoup.
-
+                $id_cons = $base->prepare(query:'SELECT `id_consultation` FROM `consultation` order by `id_consultation` desc limit 1');
+                $id_cons->execute(array());
+                while ($requeteCons= $id_cons->fetch()){
+                    $no_consult=$requeteCons['id_consultation']; // selectionner la derniere consult enregistré car c'est celle qui est en cours ducoup.
+                }
                 ////////////////////////////////////////////////////////////////////////////
 
                 //si il manque un champs etre les trois alors la met "mal rempli" et rien ne va dans la variable ptn°epreuve1
