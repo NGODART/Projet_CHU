@@ -11,5 +11,4 @@ catch(Exception $ex)
 {
     die('Impossible de se connecter à la base de donnée' . $ex->getMessage());
 }
-
 ?>
