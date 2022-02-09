@@ -161,7 +161,7 @@ include('recup_session.php'); //afin d'obtenir des variables contenu dans la ses
                 </tr>
                 <tr>
                     <td><label> Seulement 1 ou 2 erreurs  </label></td>
-                    <td><input type="radio" name="res6" value="R2"><label for="R2"> 3 points </label></td>
+                    <td><input type="radio" name="res6" value="R2"><label for="R2"> 2 points </label></td>
                 </tr>
                 <tr>
                     <td><label> Plus de 2 erreurs  </label></td>
@@ -297,7 +297,7 @@ if (isset($_POST['affREPONSES'])) {
                 if ($_POST['res6'] == "R1") {
                     $pnt_Epreuve6 =  3;}
                 elseif ($_POST['res6'] == "R2") {
-                    $pnt_Epreuve6 = 3;}
+                    $pnt_Epreuve6 = 2;}
                 elseif ($_POST['res6'] == "R3") {
                     $pnt_Epreuve6 =  1;}
                 elseif ($_POST['res6'] == "R4") {
