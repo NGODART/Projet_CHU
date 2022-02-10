@@ -174,9 +174,9 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire global - Epreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire global - Epreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Ecrivez un commentaire..."></textarea>
 
-<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
                 <br>
                 <br>
                 <input type="submit" value="Valider les réponses du test" name="affREPONSES">

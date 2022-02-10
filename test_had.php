@@ -181,7 +181,7 @@ include('db_connect.php');
 
             </table>
             <br>
-            <input type="textarea" name="com_had" id="com_had" placeholder="Commentaire" required />
+            <textarea cols="100" rows="5"  name="com_had" id="com_had" placeholder="Ecrivez un commentaire..."></textarea>
             <br>
                 <br>
                 <input type="submit" value="Afficher les réponses du test" name="affREPONSES">
