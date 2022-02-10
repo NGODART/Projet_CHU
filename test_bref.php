@@ -48,7 +48,7 @@ include('db_connect.php');
                 </tr>
             </table>
             <br>La cotation se fait automatiquement :
-            <br>Chaque réponse juste rapporte 1 point et chaque réponse fausse ne rapporte pas de point. <p>
+            <br>Chaque réponse juste rapporte 1 point et chaque réponse fausse ne rapporte pas de point. <p></p>
             <br>
             Commentaire global - Epreuve 1 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_1" id="Commentaire_GLO_1" placeholder="Ecrivez un commentaire..."></textarea></textarea>
 
