@@ -47,7 +47,8 @@ include('db_connect.php');
                     <td align="center">Commentaire :<br><textarea cols="50" rows="3" name="Commentaire_3" id="Commentaire_3" placeholder="Ecrivez un commentaire..."></textarea></textarea></td>
                 </tr>
             </table>
-            <br>La cotation se fait automatiquement :
+            <br>La cotation se fait automatiquement.
+            <br>
             <br>Chaque réponse correcte rapporte 1 point et chaque réponse fausse rapporte 0 point. <p></p>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
