@@ -26,7 +26,7 @@ include('db_connect.php');
             
             <table width="95%" border="1" align="center">
                 <!--- EPREUVE 1 -->
-                <p><h4>1. Epreuve des similitudes  <br> <br> Demander en quoi se resemblent </h4>
+                <p><h4>1. Épreuve des similitudes  <br> <br> Demander en quoi se ressemblent ... </h4>
 
                 <tr>
                     <td align="center"><label> Une orange et une banane </label></td>
@@ -53,7 +53,7 @@ include('db_connect.php');
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
             <table width="95%" border="1">
                 <!--- EPREUVE 2 -->
-                <p><h4>2. Epreuve de fluence verbale  <br> <br> Demander au patient de donner le maximun de mot commancant par la lettre "s". </h4></p>
+                <p><h4>2. Épreuve de fluence verbale  <br> <br> Demander au patient de donner le maximum de mot commençant par la lettre "s". </h4></p>
                 <tr>
                     <td><label> + de 10 mots</label></td>
                     <td><input type="radio" name="res2" value="R1"><label for="R1"> 3 points </label></td>
@@ -73,7 +73,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire - Epreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Épreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Écrivez un commentaire..."></textarea></textarea>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <table width="95%" border="1">
@@ -88,7 +88,7 @@ include('db_connect.php');
                     <td><input type="radio" name="res3" value="R2"><label for="R2"> 2 points </label></td>
                 </tr>
                 <tr>
-                    <td><label> Le patient prend les mains sans hésistation  </label></td>
+                    <td><label> Le patient prend les mains sans hesitation  </label></td>
                     <td><input type="radio" name="res3" value="R3"><label for="R3"> 1 point </label></td>
                 </tr>
                 <tr>
@@ -106,11 +106,11 @@ include('db_connect.php');
                     <td><input type="radio" name="res4" value="R1"><label for="R1"> 3 points </label></td>
                 </tr>
                 <tr>
-                    <td><label> Le patient réussit seul  au moins 3 séquences consécutives  </label></td>
+                    <td><label> Le patient réussit seul au moins 3 séquences consécutives  </label></td>
                     <td><input type="radio" name="res4" value="R2"><label for="R2"> 2 points </label></td>
                 </tr>
                 <tr>
-                    <td><label> Le patient peut y arriver seul mais réussit correctement avec l'examinateur  </label></td>
+                    <td><label> Le patient peut y arriver seul, mais réussit correctement avec l'examinateur  </label></td>
                     <td><input type="radio" name="res4" value="R3"><label for="R3"> 1 point </label></td>
                 </tr>
                 <tr>
@@ -120,13 +120,13 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire - Epreuve 4 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_4" id="Commentaire_GLO_4" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Épreuve 4 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_4" id="Commentaire_GLO_4" placeholder="Écrivez un commentaire..."></textarea></textarea>
 
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <table width="95%" border="1">
                 <!--- EPREUVE 5-->
-                <p><h4>5. Epreuve des consignes conflictuelles <br> <br> Demander au patient de taper 1 fois lorsque l'examinateur tape 2 fois et vice-versa <br> (séquence proposée : 1-1-2-1-2-2-2-1-1-1-2). </h4></p>
+                <p><h4>5. Épreuve des consignes conflictuelles <br> <br> Demander au patient de taper 1 fois lorsque l'examinateur tape 2 fois et vice-versa <br> (séquence proposée : 1-1-2-1-2-2-2-1-1-1-2). </h4></p>
                 <tr>
                     <td><label> Aucune erreur  </label></td>
                     <td><input type="radio" name="res5" value="R1"><label for="R1"> 3 points </label></td>
@@ -146,13 +146,13 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire - Epreuve 5 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_5" id="Commentaire_GLO_5" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Épreuve 5 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_5" id="Commentaire_GLO_5" placeholder="Écrivez un commentaire..."></textarea></textarea>
 
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <table width="95%" border="1">
                 <!--- EPREUVE 6-->
-                <p><h4>6. Epreuve de Go - No Go <br> <br> Le patient doit taper 1 fois quand l'examinateur tape 1 fois et ne pas taper lorsque l'examinateur tape 2 fois <br> (séquence proposée : 1-1-2-1-2-2-2-1-1-1-2).</h4></p>
+                <p><h4>6. Épreuve de Go - No Go <br> <br> Le patient doit taper 1 fois quand l'examinateur tape 1 fois et ne pas taper lorsque l'examinateur tape 2 fois <br> (séquence proposée : 1-1-2-1-2-2-2-1-1-1-2).</h4></p>
                 <tr>
                     <td><label> Aucune erreur  </label></td>
                     <td><input type="radio" name="res6" value="R1"><label for="R1"> 3 points </label></td>
@@ -172,7 +172,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire - Epreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Ecrivez un commentaire..."></textarea>
+            Commentaire - Épreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Écrivez un commentaire..."></textarea>
 
             <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
                 <br>
