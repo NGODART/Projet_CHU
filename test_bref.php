@@ -48,9 +48,7 @@ include('db_connect.php');
                 </tr>
             </table>
             <br>La cotation se fait automatiquement :
-            <br>Chaque réponse juste rapporte 1 point et chaque réponse fausse ne rapporte pas de point. <p></p>
-            <br>
-            Commentaire global - Epreuve 1 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_1" id="Commentaire_GLO_1" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            <br>Chaque réponse correcte rapporte 1 point et chaque réponse fausse rapporte 0 point. <p></p>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
             <table width="95%" border="1">
@@ -75,7 +73,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire global - Epreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Epreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Ecrivez un commentaire..."></textarea></textarea>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <table width="95%" border="1">
@@ -122,7 +120,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire global - Epreuve 4 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_4" id="Commentaire_GLO_4" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Epreuve 4 :<br><br><textarea cols="100" rows="5"  name="Commentaire_GLO_4" id="Commentaire_GLO_4" placeholder="Ecrivez un commentaire..."></textarea></textarea>
 
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
@@ -148,7 +146,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire global - Epreuve 5 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_5" id="Commentaire_GLO_5" placeholder="Ecrivez un commentaire..."></textarea></textarea>
+            Commentaire - Epreuve 5 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_5" id="Commentaire_GLO_5" placeholder="Ecrivez un commentaire..."></textarea></textarea>
 
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
@@ -174,7 +172,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire global - Epreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Ecrivez un commentaire..."></textarea>
+            Commentaire - Epreuve 6 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_6" id="Commentaire_GLO_6" placeholder="Ecrivez un commentaire..."></textarea>
 
             <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
                 <br>
@@ -249,7 +247,7 @@ if (isset($_POST['affREPONSES'])) {
 					$com_similitudes1 = htmlspecialchars($_POST['Commentaire_1']);
 					$com_similitudes2 = htmlspecialchars($_POST['Commentaire_2']);
 					$com_similitudes3 = htmlspecialchars($_POST['Commentaire_3']);
-					$com_similitudes_global = htmlspecialchars($_POST['Commentaire_GLO_1']);
+
 					
             
                             
@@ -327,9 +325,9 @@ if (isset($_POST['affREPONSES'])) {
 			};
 
             // Insertion des réponses écrites dans la table bref_reponses
-            $requeteReponse = $base->prepare("INSERT INTO bref_reponses(id_consultation_bref, id_resultats, rep1_similitudes, com1_similitudes, rep2_similitudes, com2_similitudes,rep3_similitudes,com3_similitudes,com_global_similitudes,rep_fluence,com_fluence,rep_prehension,rep_Luria,com_Luria,rep_consigne,com_consigne,rep_gonogo,com_gonogo) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            $requeteReponse = $base->prepare("INSERT INTO bref_reponses(id_consultation_bref, id_resultats, rep1_similitudes, com1_similitudes, rep2_similitudes, com2_similitudes,rep3_similitudes,com3_similitudes,rep_fluence,com_fluence,rep_prehension,rep_Luria,com_Luria,rep_consigne,com_consigne,rep_gonogo,com_gonogo) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             try {
-                $requeteReponse->execute(array($no_consult, $id_bref, $pnt_Epreuve1_1, $com_similitudes1, $pnt_Epreuve1_2, $com_similitudes2,$pnt_Epreuve1_3,$com_similitudes3,$com_similitudes_global,$pnt_Epreuve2,$com_fluence,$pnt_Epreuve3,$pnt_Epreuve4,$com_Luria,$pnt_Epreuve5,$com_consigne,$pnt_Epreuve6,$com_gonogo));
+                $requeteReponse->execute(array($no_consult, $id_bref, $pnt_Epreuve1_1, $com_similitudes1, $pnt_Epreuve1_2, $com_similitudes2,$pnt_Epreuve1_3,$com_similitudes3,$pnt_Epreuve2,$com_fluence,$pnt_Epreuve3,$pnt_Epreuve4,$com_Luria,$pnt_Epreuve5,$com_consigne,$pnt_Epreuve6,$com_gonogo));
             } catch (Exception $e) {
                 echo $e->getMessage();
             };
