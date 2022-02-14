@@ -26,7 +26,7 @@ include('db_connect.php');
             
             <table width="95%" border="1" align="center">
                 <!--- EPREUVE 1 -->
-                <p><h4>1. Epreuve des similitudes  <br> <br> Demander en quoi se resemblent :</h4>
+                <p><h4>1. Epreuve des similitudes  <br> <br> Demander en quoi se resemblent </h4>
 
                 <tr>
                     <td align="center"><label> Une orange et une banane </label></td>
@@ -53,7 +53,7 @@ include('db_connect.php');
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
             <table width="95%" border="1">
                 <!--- EPREUVE 2 -->
-                <p><h4>2. Epreuve de fluence verbale  <br> <br> Demander au patient de donner le maximun de mot commancant par la lettre "s". :</h4></p>
+                <p><h4>2. Epreuve de fluence verbale  <br> <br> Demander au patient de donner le maximun de mot commancant par la lettre "s". </h4></p>
                 <tr>
                     <td><label> + de 10 mots</label></td>
                     <td><input type="radio" name="res2" value="R1"><label for="R1"> 3 points </label></td>
