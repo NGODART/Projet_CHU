@@ -74,7 +74,7 @@ include('db_connect.php');
             </table>
             <br>
             <br>
-            Commentaire - Épreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Écrivez un commentaire..."></textarea></textarea>
+            Commentaire - Épreuve 2 :<br><br><textarea cols="100" rows="5" name="Commentaire_GLO_2" id="Commentaire_GLO_2" placeholder="Écrivez un commentaire..."></textarea>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <table width="95%" border="1">
