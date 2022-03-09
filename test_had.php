@@ -365,6 +365,24 @@ $TotalPOINTD = $pnt_Epreuve2 + $pnt_Epreuve4 +$pnt_Epreuve6 + $pnt_Epreuve8 + $p
 }
 
 
+// Insertion du nombre de points obtenus dans la table had_resultats
+$requeteResultat = $base->prepare("INSERT INTO had_resultats(id_patient, no_consultation, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+try {
+    $requeteResultat->execute(array($id_patient, $no_consult, $pnt_Epreuve1, $pnt_Epreuve1, $pnt_Epreuve2, $pnt_Epreuve3, $pnt_Epreuve4, $pnt_Epreuve5, $pnt_Epreuve6, $pnt_Epreuve7, $pnt_Epreuve8, $pnt_Epreuve9, $pnt_Epreuve10, $pnt_Epreuve11, $pnt_Epreuve12, $pnt_Epreuve13, $pnt_Epreuve14, $TotalPOINTA, $TotalPOINTD));
+    $id_had = $base->lastInsertId();
+} catch (Exception $e) {
+    echo $e->getMessage();
+};
+
+// Insertion des réponses écrites dans la table had_reponses
+$requeteReponse = $base->prepare("INSERT INTO bref_reponses(id_consultation_bref, id_resultats, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, totalA, totalD, com_had) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+try {
+    $requeteReponse->execute(array($no_consult, $id_had, $pnt_Epreuve1, $pnt_Epreuve1, $pnt_Epreuve2, $pnt_Epreuve3, $pnt_Epreuve4, $pnt_Epreuve5, $pnt_Epreuve6, $pnt_Epreuve7, $pnt_Epreuve8, $pnt_Epreuve9, $pnt_Epreuve10, $pnt_Epreuve11, $pnt_Epreuve12, $pnt_Epreuve13, $pnt_Epreuve14, $TotalPOINTA, $TotalPOINTD, $com_had));
+} catch (Exception $e) {
+    echo $e->getMessage();
+};
+
+
 //Affichage des résultats selon un code couleur lié au score
 
 if (isset($_POST['affREPONSES'])) {

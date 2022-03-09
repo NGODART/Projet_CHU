@@ -10,7 +10,7 @@
 
       .chronometre{
         margin: auto ;
-        width: 90%;
+        width: 60%;
         text-align: center;
           padding: 10px;
           border: 1px solid #f1f1f1;
