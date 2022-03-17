@@ -20,7 +20,7 @@
       }
       .tim{
       	margin: auto;
-      	width: 300px;
+      	width: 90%;
       	border: 1px solid rgba(0,0,0,0.5);
       	padding:5px 0;
       	text-align: center;

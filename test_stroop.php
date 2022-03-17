@@ -20,7 +20,7 @@ include('db_connect.php');
 
 <body>
     <center>
-        <h2>Test STROOPP</h2>
+        <h2>Test STROOP</h2>
 
 <script type="text/javascript" >    
     window.open("chrono.php", "chrono", "height=200, width=200, menubar='no', toolbar='no', location='yes', status='yes', scrollbars='no'");
@@ -59,9 +59,6 @@ include('db_connect.php');
                 </td>
             </tr>
         </table>
-        </form>
-
-<form method="post" name=insertion action="test_stroop.php">
 
         <!---------------------- Deuxième partie ------------------------------------------>
         <h3>Partie 2 : Lecture</h3>
@@ -89,9 +86,6 @@ include('db_connect.php');
                 </td>
             </tr>
         </table>
-        </form>
-
-<form method="post" name=insertion action="test_stroop.php">
 
         <!---------------------- Troisème partie ------------------------------------------>
         <h3>Partie 3 : Interférence</h3>
