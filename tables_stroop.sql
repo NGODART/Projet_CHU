@@ -1,0 +1,33 @@
+CREATE TABLE `stroop_reponses` (
+  `id_STROOP_Rep` int(11) NOT NULL,
+  `id_consultation_stroop` int(11) DEFAULT NULL,
+  `id_resultats_stroop` int(11) DEFAULT NULL,
+  `id_photo` int(11) DEFAULT NULL,
+  `partie1_NENC` int(11) DEFAULT NULL,
+  `partie1_NEC` int(11) DEFAULT NULL,
+  `partie1_temps50` int(11) DEFAULT NULL,
+  `partie1_temps` int(11) DEFAULT NULL,
+  `partie2_NENC` int(11) DEFAULT NULL,
+  `partie2_NEC` int(11) DEFAULT NULL,
+  `partie2_temps50` int(11) DEFAULT NULL,
+  `partie2_temps` int(11) DEFAULT NULL,
+  `partie3_NENC` int(11) DEFAULT NULL,
+  `partie3_NEC` int(11) DEFAULT NULL,
+  `partie3_temps50` int(11) DEFAULT NULL,
+  `partie3_temps` int(11) DEFAULT NULL,
+  `commentaire` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `stroop_resultats` (
+  `id_STROOP_R` int(11) NOT NULL,
+  `id_patient` int(11) DEFAULT NULL,
+  `No_consultation` int(11) DEFAULT NULL,
+  `interference_ENC` int(11) DEFAULT NULL,
+  `interference_temps` int(11) DEFAULT NULL,
+  `centile_ENC1` int(11) DEFAULT NULL,
+  `centile_temps1` int(11) DEFAULT NULL,
+  `centile_ENC2` int(11) DEFAULT NULL,
+  `centile_temps2` int(11) DEFAULT NULL,
+  `centile_ENC3` int(11) DEFAULT NULL,
+  `centile_temps3` int(11) DEFAULT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
