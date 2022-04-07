@@ -9,6 +9,23 @@ include('db_connect.php');
 //include('recup_session.php'); //
 ?>
 
+<?php
+// On récupère L'identifiant du patient de la derniène consultation enregistrée dans La bdd, qui correspond au patient
+$id_pat = $base -> prepare(query: 'SELECT id_patient FROM consultation ORDER BY id_consultation DESC LIMIT 1');
+$id_pat -> execute(array());
+while ($resultat = $id_pat -> fetch()) {
+$id_pat = $resultat['id_patient'];
+}
+
+// On récupère le niveau d'étude
+$nb_etude = $base -> prepare(query: 'SELECT nb_annees_etudes FROM patient where id_P = ?');
+$nb_etude -> execute(array($id_pat));
+while ($resultat = $nb_etude -> fetch()) {
+$nb_etude = $resultat['nb_annees_etudes'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -116,15 +133,55 @@ include('db_connect.php');
             
 
             <br>
-            <textarea cols="100" rows="5"  name="com_had" id="com_had" placeholder="Ecrivez un commentaire..."></textarea>
+            <textarea cols="100" rows="5"  name="com_stroop" id="com_stroop" placeholder="Ecrivez un commentaire..."></textarea>
             <br>
                 <br>
                 <input type="submit" value="Valider le test" name="affREPONSES">
                 <br>
                 <br>
             </form>
-
+    
             
 </body>
 </html>
 
+
+
+<!-- -------------- Récupération des résultats dans des variables -----------------------> 
+
+<?php
+if (isset($_POST['affREPONSES'])) {
+
+    
+        $partie1_ENC = $_POST['ENC1'];
+        $partie1_EC = $_POST['EC1'];
+        $partie1_T50 = $_POST['time1-1'];
+        $partie1_TT = $_POST['time1-2'];
+
+        $partie2_ENC = $_POST['ENC2'];
+        $partie2_EC = $_POST['EC2'];
+        $partie2_T50 = $_POST['time2-1'];
+        $partie2_TT = $_POST['time2-2'];
+
+        $partie3_ENC = $_POST['ENC3'];
+        $partie3_EC = $_POST['EC3'];
+        $partie3_T50 = $_POST['time3-1'];
+        $partie3_TT = $_POST['time3-2'];
+
+}
+
+//récupération du commentaire
+{
+$com_stroop = htmlspecialchars($_POST['com_stroop']);
+}
+
+$Interference_ENC = $partie3_TT - $partie1_TT;
+$Interference_temps = $partie3_ENC - $partie1_ENC;
+
+if ($nb_etude)
+{
+    
+
+} 
+
+?>
